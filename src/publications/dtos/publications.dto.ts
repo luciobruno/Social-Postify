@@ -1,4 +1,4 @@
-import { IsDate, IsNotEmpty, IsNumber } from 'class-validator';
+import { IsDateString, IsNotEmpty, IsNumber } from 'class-validator';
 
 export class PublicationDTO {
   @IsNumber()
@@ -9,7 +9,7 @@ export class PublicationDTO {
   @IsNotEmpty({ message: 'All fields are required!' })
   postId: number;
 
-  @IsDate()
+  @IsDateString()
   @IsNotEmpty({ message: 'All fields are required!' })
-  date: Date;
+  date: string;
 }
