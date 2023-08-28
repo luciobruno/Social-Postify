@@ -20,4 +20,9 @@ export class PublicationsRepository {
   async updatePublicationById(data: PublicationDTO, id: number) {
     return await this.prisma.publication.update({ where: { id }, data: data });
   }
+  async findPostAndMediaById(postId: number, mediaId: number) {
+    const post = await this.prisma.post.findFirst({ where: { id: postId } });
+    const media = await this.prisma.media.findFirst({ where: { id: mediaId } });
+    return { media, post };
+  }
 }
