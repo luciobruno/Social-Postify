@@ -14,8 +14,6 @@ model Media {
   id          Int           @id @default(autoincrement())
   title       String
   username    String        @db.VarChar(255)
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
   Publication Publication[]
 }
 
@@ -24,8 +22,6 @@ model Post {
   title       String
   text        String
   image       String?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
   Publication Publication[]
 }
 
@@ -36,6 +32,4 @@ model Publication {
   Post      Post     @relation(fields: [postId], references: [id])
   postId    Int
   date      DateTime
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }

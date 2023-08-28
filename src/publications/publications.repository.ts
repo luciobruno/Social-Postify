@@ -6,18 +6,21 @@ import { PublicationDTO } from './dtos/publications.dto';
 export class PublicationsRepository {
   constructor(private readonly prisma: PrismaService) {}
   async createPublication(data: PublicationDTO) {
-    await this.prisma.publication.create({ data: data });
+    return await this.prisma.publication.create({ data: data });
   }
   async findAllPublications() {
-    await this.prisma.publication.findMany();
+    return await this.prisma.publication.findMany();
   }
   async findPublicationById(id: number) {
-    await this.prisma.publication.findFirst({ where: { id } });
+    return await this.prisma.publication.findFirst({ where: { id } });
   }
   async deletePublicationById(id: number) {
-    await this.prisma.publication.delete({ where: { id } });
+    return await this.prisma.publication.delete({ where: { id } });
   }
   async updatePublicationById(data: PublicationDTO, id: number) {
-    await this.prisma.publication.update({ where: { id }, data: data });
+    return await this.prisma.publication.update({ where: { id }, data: data });
+  }
+  async findPublicationByPostId(id: number) {
+    return await this.prisma.publication.findFirst({ where: { postId: id } });
   }
 }

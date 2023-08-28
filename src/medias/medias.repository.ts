@@ -28,4 +28,7 @@ export class MediasRepository {
       },
     });
   }
+  async findPublicationByMediaId(id: number) {
+    return await this.prisma.publication.findFirst({ where: { mediaId: id } });
+  }
 }
