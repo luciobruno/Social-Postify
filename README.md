@@ -11,6 +11,9 @@ Este projeto possui 3 rotas:
 - Posts
 - Publications
 
+<img src="assets/imagem_2023-09-11_022636132.png" alt="Login" height=250 width=auto>
+
+
 Em cada uma delas, é possível adicionar um novo elemento, buscar todos os dados, buscar um dado específico por ID, atualizar algumas informações de um elemento e apagar um elemento. Além disso, foram realizados testes de integração para cada uma das rotas, utilizando ferramentas como Faker, Jest e Supertest, com o intuito de garantir a qualidade do aplicativo.
 
 # Tecnologias
