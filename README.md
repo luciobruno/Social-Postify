@@ -4,6 +4,15 @@ O "Social Postify" é um aplicativo web que permite aos usuários criar e agenda
 
 # Sobre este Projeto
 
+O gerenciamento das atividades de mídia social, economiza tempo, melhora a consistência do conteúdo e permite que os usuários atinjam seu público de maneira mais estratégica.
+
+Este projeto possui 3 rotas:
+- Médias
+- Posts
+- Publicações
+
+Em cada uma delas, é possível adicionar um novo elemento, buscar todos os dados, buscar um dado específico por ID, atualizar algumas informações de um elemento e apagar um elemento. Além disso, foram realizados testes de integração para cada uma das rotas, utilizando ferramentas como Faker, Jest e Supertest, com o intuito de garantir a qualidade do aplicativo.
+
 # Tecnologias
 
 As seguintes ferramentas e estruturas foram utilizadas na construção deste projeto:
