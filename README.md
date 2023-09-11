@@ -9,6 +9,7 @@ O "Social Postify" é um aplicativo web que permite aos usuários criar e agenda
 As seguintes ferramentas e estruturas foram utilizadas na construção deste projeto:
 
 ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
@@ -20,12 +21,20 @@ As seguintes ferramentas e estruturas foram utilizadas na construção deste pro
 ```bash
 npm i
 ```
-3. Inicie o front-end com
+3. Copie o arquivo .env.example, configure-o e renomeie-o para .env
+4. Aplique as migrações do Prisma ao banco de dados
 ```bash
-npm start
+npx prisma migrate dev
 ```
-4. Opcionalmente, você pode compilar o projeto executando
+5. Por fim, rode o back-end com
 ```bash
-npm run build
+npm run start
 ```
-5. Por fim, acesse http://localhost:3000 no seu navegador favorito (a menos que seja o Internet Explorer. Nesse caso, pode dar erro)
+
+## Como rodar os testes
+
+1. Copie o arquivo .env.test.example, configure-o e renomeie-o para .env.test
+2. Por fim, rode os testes com o comando
+```bash
+npm run test:e2e
+```
